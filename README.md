@@ -1,7 +1,8 @@
 # Un ejemplo de AWS Glue Crawler
 
 Este repositorio se creó para investigar el comportamiento de AWS Glue Crawler.
-AWS Glue Crawler no está bien documentado y tiene un comportamiento misterioso.
+Y hacer una pequeña demostracion para la entrevista de bairesdev para el opening.
+En mi concepto AWS Glue Crawler no está bien documentado y tiene un comportamiento misterioso.
 
 Aunque para un caso de uso simple,
 de modo que todos los archivos JSON de un bucket de S3 tengan la misma estructura,
@@ -11,7 +12,7 @@ Producirá más de un esquema de tabla.
 
 ## Datasets
 
-Este repositorio tiene cinco conjuntos de datos que se pueden proporcionar a AWS Glue Crawler:
+Este repositorio tiene cinco conjuntos de datos que se pueden cargar a AWS Glue Crawler:
 
 *   json-data-example
 *   Clave plana y una clave común
@@ -24,7 +25,7 @@ Estos conjuntos de datos se definen en *glue_crawler_example/datos.py*.
 El conjunto de datos `json-data-example` solo tienen un archivo JSON.
 Glue Crawler genera solo un esquema de tabla.
 
-El conjunto de datos `flat-and-one-common-key` tener archivos JSON colocados en la raíz.
+El conjunto de datos `flat-and-one-common-key` tiene archivos JSON puestos en la raíz.
 Los archivos JSON tienen la clave común `id`
 Pero cada archivo tiene una clave adicional única para el archivo.
 Glue Crawler genera tablas para cada archivo JSON.
